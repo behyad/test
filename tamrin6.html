@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .pic {
+            object-fit: cover;
+            height: 200px;
+            aspect-ratio: 1;
+        }
+
+        .slides {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .large_pic {
+            height: 600px;
+        }
+    </style>
+    <script type="module">
+        let list = document.querySelectorAll(".item");
+        for (let item of list) {
+            item.addEventListener("click", () => {
+                document.querySelector('.large_pic').src = item.src;
+            });
+        }
+        let button=document.querySelector("button");
+        button.addEventListener("click",()=>{
+            document.querySelector('.large_pic').style.filter="brightness(0.5)";
+        });
+    </script>
+</head>
+
+<body>
+    <div class="slide_box">
+        <button>click me!</button>
+        <img class="large_pic" src="./assets/7.jpg" />
+        <div class="slides">
+            <img class="item" src="./assets/2.jpg" />
+            <img class="item" src="./assets/3.jpg" />
+            <img class="item" src="./assets/4.jpg" />
+            <img class="item" src="./assets/5.jpg" />
+            <img class="item" src="./assets/1.jpg" />
+            <img class="item" src="./assets/6.jpg" />
+        </div>
+    </div>
+</body>
+
+</html>
