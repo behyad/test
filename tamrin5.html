@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="sort">after click on button you see the sort people :</p>
+    <button onclick="sortId()">try it!</button>
+    <p id="demo"></p>
+    <script>
+        let person1 = {
+            id: 5467,
+            firstName: "donya",
+            family: "jahanbakhsh",
+            eye_color: "brown"
+        };
+        person2 = {
+            id: 1234,
+            firstName: "maryam",
+            family: "mohamadi",
+            eye_color: "black"
+        };
+        person3 = {
+            id: 1243,
+            firstName: "mehran",
+            family: "ahmadi",
+            eye_color: "green"
+        };
+        person4 = {
+            id: 4466,
+            firstName: "behnoosh",
+            family: "yadegari",
+            eye_color: "gray"
+        };
+        total_id = [`id:${person1.id}`, `id:${person2.id}`,`id:${person3.id}`,`id:${person4.id}`];
+        document.getElementById("demo").innerHTML = total_id;
+        function sortId() {
+            total_id.sort();
+            document.getElementById("demo").innerHTML = total_id;
+        }
+    </script>
+</body>
+
+</html>
